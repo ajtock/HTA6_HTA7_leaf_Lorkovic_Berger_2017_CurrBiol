@@ -5,6 +5,7 @@
 # Usage:
 # source activate R-4.0.0
 # ./GRangesToBEDandGFF3.R HTA6_ChIP_SRR5298545 arm 'Chr1,Chr2,Chr3,Chr4,Chr5'
+# ./GRangesToBEDandGFF3.R HTA7_ChIP_SRR5298546 arm 'Chr1,Chr2,Chr3,Chr4,Chr5'
 # conda deactivate
 
 #libName = "HTA6_ChIP_SRR5298545"
@@ -17,6 +18,11 @@ libName = args[1]
 region = args[2]
 chrName <- unlist(strsplit(args[3],
                            split = ","))
+
+gff_dir = "GFF3/"
+bed_dir = "BED/"
+system(paste0("[ -d ", gff_dir, " ] || mkdir -p ", gff_dir))
+system(paste0("[ -d ", bed_dir, " ] || mkdir -p ", bed_dir))
 
 options(stringsAsFactors=F)
 library(GenomicRanges)
@@ -141,7 +147,7 @@ peaks_gff = data.frame(seqid=as.character(peaks$seqnames),
                        phase=as.character("."),
                        attribute=as.character("."))
 write.table(peaks_gff,
-            file=paste0(libName, "_peaks_", region, "_",  
+            file=paste0(gff_dir, libName, "_peaks_", region, "_",  
                         paste0(chrName, collapse="_"), ".gff3"),
             quote=F, sep="\t", row.names=F, col.names=F)
 
@@ -153,7 +159,7 @@ peaks_bed = data.frame(chr=as.character(peaks$seqnames),
                        score=rep("NA", nrow(peaks)),
                        strand=as.character(peaks$strand))
 write.table(peaks_bed,
-            file=paste0(libName, "_peaks_", region, "_",  
+            file=paste0(bed_dir, libName, "_peaks_", region, "_",  
                         paste0(chrName, collapse="_"), ".bed"),
             quote=F, sep="\t", row.names=F, col.names=F)
 
@@ -173,7 +179,7 @@ ranLoc_gff = data.frame(seqid=as.character(ranLoc$seqnames),
                         phase=as.character("."),
                         attribute=as.character("."))
 write.table(ranLoc_gff,
-            file=paste0(libName, "_peaks_", region, "_",  
+            file=paste0(gff_dir, libName, "_peaks_", region, "_",  
                         paste0(chrName, collapse="_"), "_randomLoci.gff3"),
             quote=F, sep="\t", row.names=F, col.names=F)
 
@@ -185,6 +191,6 @@ ranLoc_bed = data.frame(chr=as.character(ranLoc$seqnames),
                         score=rep("NA", nrow(ranLoc)),
                         strand=as.character(ranLoc$strand))
 write.table(ranLoc_bed,
-            file=paste0(libName, "_peaks_", region, "_",  
+            file=paste0(bed_dir, libName, "_peaks_", region, "_",  
                         paste0(chrName, collapse="_"), "_randomLoci.bed"),
             quote=F, sep="\t", row.names=F, col.names=F)
