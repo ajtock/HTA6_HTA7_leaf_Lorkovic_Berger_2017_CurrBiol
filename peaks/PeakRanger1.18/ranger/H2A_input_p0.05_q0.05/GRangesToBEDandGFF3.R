@@ -135,6 +135,8 @@ stopifnot(identical(width(ranLocGR), width(peaksGR)))
 # peaks
 # Convert into GFF3 and BED formats
 peaks = data.frame(peaksGR)
+# Remove "Chr" for compatibility with TAIR10 files
+peaks$seqnames = gsub("Chr", "", peaks$seqnames)
 
 # GFF3
 peaks_gff = data.frame(seqid=as.character(peaks$seqnames),
@@ -167,6 +169,8 @@ write.table(peaks_bed,
 # ranLoc
 # Convert into GFF3 and BED formats
 ranLoc = data.frame(ranLocGR)
+# Remove "Chr" for compatibility with TAIR10 files
+ranLoc$seqnames = gsub("Chr", "", ranLoc$seqnames)
 
 # GFF3
 ranLoc_gff = data.frame(seqid=as.character(ranLoc$seqnames),
