@@ -9,7 +9,7 @@
 # http://avrilomics.blogspot.co.uk/2015/07/using-topgo-to-test-for-go-term.html
 
 # Example usage:
-# ./topGO_DEGs_intersection_TAIR10_GO_GOSLIM_030418_incl_weight.R BP genes_overlapping_arm_HTA7_peaks_geneIDs.txt 0.05 arm
+# ./topGO_genes_TAIR10_GO_GOSLIM_030418_incl_weight.R BP genes_overlapping_arm_HTA7_HTA6_peaks_geneIDs.txt 0.05 arm
 
 #options(echo=TRUE) # if you want to see commands in output file
 args <- commandArgs(trailingOnly = TRUE)
@@ -78,7 +78,7 @@ geneList <- factor(as.integer(geneUniverse %in% genesOfInterest))
 names(geneList) <- geneUniverse
 
 # Build GOdata object in topGO
-capture.output(GOdata <- new("topGOdata", description = "Differentially expressed genes", ontology = ont,
+capture.output(GOdata <- new("topGOdata", description = "Genes overlapping HTA6, HTA7, and/or H3K9me2 peaks", ontology = ont,
                              allGenes = geneList, annot = annFUN.gene2GO, gene2GO = geneID2GO),
                file="/dev/null")
 

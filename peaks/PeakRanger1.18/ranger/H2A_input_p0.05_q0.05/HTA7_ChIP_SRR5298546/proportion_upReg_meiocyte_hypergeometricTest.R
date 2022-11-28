@@ -14,27 +14,27 @@
 # in a sample size of length(geneIDs) [k] from a total gene set consisting of
 # length(upRegMeio_geneIDs) [m] + (length(TAIR10_geneIDsChr)-length(upRegMeio_geneIDs)) [n]
 
-# Usage: ./proportion_upReg_meiocyte_hypergeometricTest.R genes_overlapping_arm_HTA7_peaks_geneIDs.txt arm upReg_meiocyte FDR0.01_L2FC0.0 100000
+# Usage: ./proportion_upReg_meiocyte_hypergeometricTest.R genes_overlapping_arm_HTA7_HTA6_peaks_geneIDs.txt arm upReg_meiocyte FDR0.01_L2FC0.0 100000
 
 library(methods)
 library(GenomicRanges)
 
 #geneIDsFile <- "genes_overlapping_arm_HTA7_peaks_geneIDs.txt"
 #region <- "arm"
-#outDir <- "upReg_meiocyte"
+#outDirName <- "upReg_meiocyte"
 #meioFDR <- "FDR0.01_L2FC0.0"
 #samples <- 100000
 
 args <- commandArgs(trailingOnly = TRUE)
 geneIDsFile <- args[1]
 region <- args[2]
-outDir <- args[3]
+outDirName <- args[3]
 meioFDR <- args[4]
 # Number of randomisations to perform
 samples <- as.numeric(args[5])
 
-outDir <- paste0(dirname(geneIDsFile), "/", outDir, "/")
-plotDir <- paste0(dirname(geneIDsFile), "/", outDir, "/plots/")
+outDir <- paste0(dirname(geneIDsFile), "/", outDirName, "/")
+plotDir <- paste0(dirname(geneIDsFile), "/", outDirName, "/plots/")
 system(paste0("[ -d ", outDir, " ] || mkdir ", outDir))
 system(paste0("[ -d ", plotDir, " ] || mkdir ", plotDir))
 
