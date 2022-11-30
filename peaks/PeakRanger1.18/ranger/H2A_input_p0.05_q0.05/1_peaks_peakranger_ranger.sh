@@ -4,7 +4,7 @@
 ## PeakRanger manual at http://ranger.sourceforge.net/manual1.18.html
 
 # Usage:
-# csmit -m 10G -c 48 "bash ./1_peaks_peakranger_ranger.sh '/home/ajt200/analysis/HTA6_HTA7_leaf_Lorkovic_Berger_2017_CurrBiol' '/home/ajt200/analysis/HTA6_HTA7_leaf_Lorkovic_Berger_2017_CurrBiol' HTA7_ChIP_SRR5298546 HTA_input_SRR5298544 0.05 0.05 150 48"
+# csmit -m 10G -c 48 "bash ./1_peaks_peakranger_ranger.sh '/home/ajt200/analysis/HTA6_HTA7_leaf_Lorkovic_Berger_2017_CurrBiol' '/home/ajt200/analysis/HTA6_HTA7_leaf_Lorkovic_Berger_2017_CurrBiol' HTA6_ChIP_SRR5298545 HTA_input_SRR5298544 0.05 0.05 150 48"
 
 ChIP_bamDir=$1
 input_bamDir=$2

@@ -1,0 +1,43 @@
+#!/bin/bash
+
+#./GRangesToBEDandGFF3.R HTA6_ChIP_SRR5298545 arm 'Chr1,Chr2,Chr3,Chr4,Chr5'
+#./GRangesToBEDandGFF3.R HTA6_ChIP_SRR5298545 arm 'Chr1'
+#./GRangesToBEDandGFF3.R HTA6_ChIP_SRR5298545 arm 'Chr2'
+#./GRangesToBEDandGFF3.R HTA6_ChIP_SRR5298545 arm 'Chr3'
+#./GRangesToBEDandGFF3.R HTA6_ChIP_SRR5298545 arm 'Chr4'
+#./GRangesToBEDandGFF3.R HTA6_ChIP_SRR5298545 arm 'Chr5'
+#
+#./GRangesToBEDandGFF3.R HTA6_ChIP_SRR5298545 peri 'Chr1,Chr2,Chr3,Chr4,Chr5'
+#./GRangesToBEDandGFF3.R HTA6_ChIP_SRR5298545 peri 'Chr1'
+#./GRangesToBEDandGFF3.R HTA6_ChIP_SRR5298545 peri 'Chr2'
+#./GRangesToBEDandGFF3.R HTA6_ChIP_SRR5298545 peri 'Chr3'
+#./GRangesToBEDandGFF3.R HTA6_ChIP_SRR5298545 peri 'Chr4'
+#./GRangesToBEDandGFF3.R HTA6_ChIP_SRR5298545 peri 'Chr5'
+#
+#./GRangesToBEDandGFF3.R HTA6_ChIP_SRR5298545 genomewide 'Chr1,Chr2,Chr3,Chr4,Chr5'
+#./GRangesToBEDandGFF3.R HTA6_ChIP_SRR5298545 genomewide 'Chr1'
+#./GRangesToBEDandGFF3.R HTA6_ChIP_SRR5298545 genomewide 'Chr2'
+#./GRangesToBEDandGFF3.R HTA6_ChIP_SRR5298545 genomewide 'Chr3'
+#./GRangesToBEDandGFF3.R HTA6_ChIP_SRR5298545 genomewide 'Chr4'
+#./GRangesToBEDandGFF3.R HTA6_ChIP_SRR5298545 genomewide 'Chr5'
+
+./GRangesToBEDandGFF3.R HTA7_ChIP_SRR5298546 arm 'Chr1,Chr2,Chr3,Chr4,Chr5'
+./GRangesToBEDandGFF3.R HTA7_ChIP_SRR5298546 arm 'Chr1'
+./GRangesToBEDandGFF3.R HTA7_ChIP_SRR5298546 arm 'Chr2'
+./GRangesToBEDandGFF3.R HTA7_ChIP_SRR5298546 arm 'Chr3'
+./GRangesToBEDandGFF3.R HTA7_ChIP_SRR5298546 arm 'Chr4'
+./GRangesToBEDandGFF3.R HTA7_ChIP_SRR5298546 arm 'Chr5'
+
+./GRangesToBEDandGFF3.R HTA7_ChIP_SRR5298546 peri 'Chr1,Chr2,Chr3,Chr4,Chr5'
+./GRangesToBEDandGFF3.R HTA7_ChIP_SRR5298546 peri 'Chr1'
+./GRangesToBEDandGFF3.R HTA7_ChIP_SRR5298546 peri 'Chr2'
+./GRangesToBEDandGFF3.R HTA7_ChIP_SRR5298546 peri 'Chr3'
+./GRangesToBEDandGFF3.R HTA7_ChIP_SRR5298546 peri 'Chr4'
+./GRangesToBEDandGFF3.R HTA7_ChIP_SRR5298546 peri 'Chr5'
+
+./GRangesToBEDandGFF3.R HTA7_ChIP_SRR5298546 genomewide 'Chr1,Chr2,Chr3,Chr4,Chr5'
+./GRangesToBEDandGFF3.R HTA7_ChIP_SRR5298546 genomewide 'Chr1'
+./GRangesToBEDandGFF3.R HTA7_ChIP_SRR5298546 genomewide 'Chr2'
+./GRangesToBEDandGFF3.R HTA7_ChIP_SRR5298546 genomewide 'Chr3'
+./GRangesToBEDandGFF3.R HTA7_ChIP_SRR5298546 genomewide 'Chr4'
+./GRangesToBEDandGFF3.R HTA7_ChIP_SRR5298546 genomewide 'Chr5'

@@ -5,7 +5,7 @@
 # Python version 2.7.13
 
 # Example usage via condor submission system on hydrogen node7
-# csmit -m 50G -c 48 "bash PE_ChIPseq_MNaseSeq_mapping_pipeline_bowtie2.sh HTA7_ChIP_SRR5298546"
+# csmit -m 50G -c 32 "bash PE_ChIPseq_MNaseSeq_mapping_pipeline_bowtie2.sh HTA6_ChIP_SRR5298545"
 
 i=$1
 
